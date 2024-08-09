@@ -16,16 +16,19 @@ public class ClientBuyState : IState
     }
     public void Update()
     {
-        client.buyTime -= Time.deltaTime;
-        if (client.buyTime <= 0 && !client.canSit)
+        client.aim.buyTime -= Time.deltaTime;
+        if (client.aim.buyTime <= 0 && !client.canSit)
         {
+            client.GiveMoney(client.money);
             client.bought = true;
             client.StateMachine.ChangeState(client.StateMachine.ClientWalkState);
+            client.aim.buyTime = 7f;
         }
+
     }
     public void Exit()
     {
-
+        Debug.Log("Exit buy state");
     }
 
 

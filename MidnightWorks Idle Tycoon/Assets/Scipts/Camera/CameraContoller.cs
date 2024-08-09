@@ -33,8 +33,9 @@ public class CameraContoller : MonoBehaviour
         if (isRot)
         {
             Vector3 aimVector = Input.mousePosition;
-
-            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, gameObject.transform.position + (aimVector - str), .5f);
+            Vector3 myVec = new Vector3((gameObject.transform.position.x + (str - aimVector).x), gameObject.transform.position.y, (gameObject.transform.position.z + (str - aimVector).y));
+            Vector3 vector3 = Quaternion.AngleAxis(45, Vector3.up) * myVec;
+            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, vector3, .1f);
         }
     }
 }

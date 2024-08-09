@@ -19,16 +19,16 @@ public class ClientWalkState : IState
     {
         if (!client.bought)
         {
-            MoveClient(client.gameObject, client.aim.transform.position, .33f);
+            client.MoveClient(client.gameObject, client.aim.gameObject.transform.position, .33f);
 
-            if (Vector3.Distance(client.transform.position, client.aim.transform.position) < .5f && !client.bought)
+            if (Vector3.Distance(client.transform.position, client.aim.gameObject.transform.position) < .5f && !client.bought)
             {
                 client.StateMachine.ChangeState(client.StateMachine.CLientBuyState);
             }
         }
         if (client.bought && !client.canSit)
         {
-            MoveClient(client.gameObject, client.startPos, .33f);
+            client.MoveClient(client.gameObject, client.startPos, .33f);
 
         }
     }
@@ -37,11 +37,7 @@ public class ClientWalkState : IState
 
     }
 
-    public void MoveClient(GameObject client, Vector3 target, float speed)
-    {
-        client.transform.position = Vector3.MoveTowards(client.transform.position, target, speed);
 
-    }
     // Start is called before the first frame update
 
 

@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3332800828960236234}
+  - component: {fileID: 1595111597673223760}
   m_Layer: 0
   m_Name: Caffee Station 1
   m_TagString: Untagged
@@ -33,6 +34,18 @@ Transform:
   - {fileID: 9087381922620116089}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1595111597673223760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2148457515403128218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b14edc7f6601e45afa3f1f5b5241b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8387340136296128788
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -173,22 +186,22 @@ PrefabInstance:
     - target: {fileID: 5433492061856165737, guid: 6c5025d483f1d8849b9cde434b396624,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9238796
+      value: 0.49999994
       objectReference: {fileID: 0}
     - target: {fileID: 5433492061856165737, guid: 6c5025d483f1d8849b9cde434b396624,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5433492061856165737, guid: 6c5025d483f1d8849b9cde434b396624,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.38268346
+      value: 0.86602545
       objectReference: {fileID: 0}
     - target: {fileID: 5433492061856165737, guid: 6c5025d483f1d8849b9cde434b396624,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5433492061856165737, guid: 6c5025d483f1d8849b9cde434b396624,
         type: 3}
@@ -198,7 +211,7 @@ PrefabInstance:
     - target: {fileID: 5433492061856165737, guid: 6c5025d483f1d8849b9cde434b396624,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 45
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 5433492061856165737, guid: 6c5025d483f1d8849b9cde434b396624,
         type: 3}
