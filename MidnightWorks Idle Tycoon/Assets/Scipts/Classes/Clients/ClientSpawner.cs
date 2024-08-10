@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class ClientSpawner : MonoBehaviour
 {
-    public int amount;
+    public int counter = 0;
     public float coolDown = 3f;
     public bool canSpawn;
+
 
     public GameObject client;
     void Start()
@@ -14,21 +15,21 @@ public class ClientSpawner : MonoBehaviour
         canSpawn = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (canSpawn && amount != 0)
+        if (canSpawn)
         {
-            GameObject newClient = Instantiate(client, transform.position, Quaternion.identity);
-            newClient.name = $"Client № {(10 - amount).ToString()}";
+            System.Random random = new System.Random();
+            GameObject newClient = Instantiate(client, gameObject.transform.position, Quaternion.identity);
+            counter++;
+            newClient.name = $"Client № {counter}";
             canSpawn = false;
-            amount--;
         }
         coolDown -= Time.deltaTime;
         if (coolDown <= 0)
         {
             canSpawn = true;
-            coolDown = 0f;
+            coolDown = 3f;
         }
     }
 }

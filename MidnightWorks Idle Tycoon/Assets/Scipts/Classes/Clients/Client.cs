@@ -8,13 +8,12 @@ public class Client : MonoBehaviour
 
     public Station aim;
 
-    public Balance gameBalance;
     public Vector3 startPos;
 
     public bool bought;
 
     public bool canSit = false;
-    public float hearts;
+    public int hearts;
     public float money;
 
     public int queuePos = 0;
@@ -24,7 +23,6 @@ public class Client : MonoBehaviour
     void Start()
     {
         uIView = FindAnyObjectByType<UIView>();
-        gameBalance = FindAnyObjectByType<Balance>();
         aim = FindAnyObjectByType<Station>();
         rb = GetComponent<Rigidbody>();
         StateMachine = new StateMachine(this);

@@ -829,14 +829,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 086381ef65bb324479f76f592558a0dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uIView: {fileID: 0}
   rb: {fileID: 8406845055882037668}
   aim: {fileID: 0}
-  gameBalance: {fileID: 0}
   startPos: {x: 0, y: 0, z: 0}
   bought: 0
   canSit: 0
-  hearts: 0
+  hearts: 1
   money: 15
+  queuePos: 0
 --- !u!1 &8406845055918955520
 GameObject:
   m_ObjectHideFlags: 0

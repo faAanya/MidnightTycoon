@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class UIView : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI text;
-    private UIModel uIModel;
+    [SerializeField] private TextMeshProUGUI moneyText, heartsText;
+    public UIModel uIModel;
     [HideInInspector] public UIController uIController;
 
     private void Start()
@@ -14,12 +14,17 @@ public class UIView : MonoBehaviour
         uIModel = new UIModel();
         uIController = new UIController(uIModel);
 
-        uIModel.OnMoneyChanged += UpdateText;
+        uIModel.OnMoneyChanged += UpdateMoneyText;
+        uIModel.OnHertsChanged += UpdateHeartsText;
     }
 
-    private void UpdateText(float money)
+    private void UpdateMoneyText(float money)
     {
-        text.text = "Money" + money.ToString();
+        moneyText.text = money.ToString();
+    }
+    private void UpdateHeartsText(int hearts)
+    {
+        heartsText.text = hearts.ToString();
     }
 
 }

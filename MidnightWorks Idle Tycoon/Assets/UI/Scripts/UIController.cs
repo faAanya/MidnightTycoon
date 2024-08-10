@@ -20,5 +20,15 @@ public class UIController
     {
         uIModel.CurrentMoney -= money;
     }
+    public void AddHearts(int hearts)
+    {
+        uIModel.CurrentHearts += hearts;
+    }
+    public void SpendHearts(int hearts)
+    {
+        uIModel.CurrentHearts -= hearts;
+    }
+
+
 
 }

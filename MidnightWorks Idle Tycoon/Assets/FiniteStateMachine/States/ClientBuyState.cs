@@ -20,6 +20,9 @@ public class ClientBuyState : IState
         if (client.aim.queue[client.queuePos].buyTime <= 0 && !client.canSit)
         {
             client.uIView.uIController.AddMoney(client.money);
+            client.uIView.uIController.AddHearts(client.hearts);
+
+
             client.bought = true;
             client.aim.queue[client.queuePos].isBusy = false;
             client.aim.ResetTimer(client.queuePos);
