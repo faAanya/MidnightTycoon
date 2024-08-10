@@ -7,14 +7,16 @@ public class StateMachine
     public IState CurrentState { get; private set; }
 
     public ClientWalkState ClientWalkState;
-    public ClientBuyState CLientBuyState;
+    public ClientBuyState ClientBuyState;
+    public ClientWaitState ClientWaitState;
 
 
 
     public StateMachine(Client client)
     {
         this.ClientWalkState = new ClientWalkState(client);
-        this.CLientBuyState = new ClientBuyState(client);
+        this.ClientBuyState = new ClientBuyState(client);
+        this.ClientWaitState = new ClientWaitState(client);
     }
 
     public void Initialize(IState StartingState)

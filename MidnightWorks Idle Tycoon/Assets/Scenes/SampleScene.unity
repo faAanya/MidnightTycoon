@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 229297105}
   - component: {fileID: 229297104}
   - component: {fileID: 229297108}
+  - component: {fileID: 229297109}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -239,6 +240,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   balance: 0
+--- !u!114 &229297109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229297103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1242d0cfa9d2564b88cf8a2591f0df6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1868338190}
 --- !u!1001 &493172253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -663,6 +677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRot: 0
+  speed: 0.001
 --- !u!1 &1464762442
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,7 +723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amount: 10
-  coolDown: 3
+  coolDown: 0
   canSpawn: 0
   client: {fileID: 8406845055882037674, guid: 36621476210b2c649b8aeea96b7c2587, type: 3}
 --- !u!1 &1572348566
@@ -1030,6 +1045,11 @@ PrefabInstance:
     - target: {fileID: 1595111597673223760, guid: bd4d8b1290f93d645b5fff4834fd0a70,
         type: 3}
       propertyPath: buyTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1595111597673223760, guid: bd4d8b1290f93d645b5fff4834fd0a70,
+        type: 3}
+      propertyPath: capacity
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2148457515403128218, guid: bd4d8b1290f93d645b5fff4834fd0a70,

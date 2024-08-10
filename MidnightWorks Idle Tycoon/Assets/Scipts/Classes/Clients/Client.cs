@@ -3,6 +3,7 @@ using UnityEngine;
 public class Client : MonoBehaviour
 {
 
+    public UIView uIView;
     public Rigidbody rb;
 
     public Station aim;
@@ -16,10 +17,13 @@ public class Client : MonoBehaviour
     public float hearts;
     public float money;
 
+    public int queuePos = 0;
+
     public StateMachine StateMachine { get; private set; }
 
     void Start()
     {
+        uIView = FindAnyObjectByType<UIView>();
         gameBalance = FindAnyObjectByType<Balance>();
         aim = FindAnyObjectByType<Station>();
         rb = GetComponent<Rigidbody>();
@@ -33,14 +37,6 @@ public class Client : MonoBehaviour
         StateMachine.Update();
     }
 
-    public void GiveMoney(float money)
-    {
-        gameBalance.balance += money;
-    }
-    public void GiveHearts(int hearts)
-    {
-
-    }
 
     public void MoveClient(GameObject client, Vector3 target, float speed)
     {

@@ -13,7 +13,7 @@ public class ClientWalkState : IState
 
     public void Enter()
     {
-        Debug.Log("Walk state");
+        Debug.Log($"{client.gameObject.name} Walk state");
     }
     void IState.Update()
     {
@@ -23,7 +23,7 @@ public class ClientWalkState : IState
 
             if (Vector3.Distance(client.transform.position, client.aim.gameObject.transform.position) < .5f && !client.bought)
             {
-                client.StateMachine.ChangeState(client.StateMachine.CLientBuyState);
+                client.StateMachine.ChangeState(client.StateMachine.ClientWaitState);
             }
         }
         if (client.bought && !client.canSit)

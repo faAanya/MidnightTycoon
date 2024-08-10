@@ -20,6 +20,7 @@ public class ClientSpawner : MonoBehaviour
         if (canSpawn && amount != 0)
         {
             GameObject newClient = Instantiate(client, transform.position, Quaternion.identity);
+            newClient.name = $"Client № {(10 - amount).ToString()}";
             canSpawn = false;
             amount--;
         }
@@ -27,7 +28,7 @@ public class ClientSpawner : MonoBehaviour
         if (coolDown <= 0)
         {
             canSpawn = true;
-            coolDown = 3f;
+            coolDown = 0f;
         }
     }
 }

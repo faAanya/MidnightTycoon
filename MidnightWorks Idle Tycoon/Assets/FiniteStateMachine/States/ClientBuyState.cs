@@ -12,23 +12,27 @@ public class ClientBuyState : IState
 
     public void Enter()
     {
-        Debug.Log("Buy State");
+        Debug.Log($"{client.gameObject.name} Buy State");
     }
     public void Update()
     {
-        client.aim.buyTime -= Time.deltaTime;
-        if (client.aim.buyTime <= 0 && !client.canSit)
+        client.aim.StartTimer(client.queuePos);
+        if (client.aim.queue[client.queuePos].buyTime <= 0 && !client.canSit)
         {
-            client.GiveMoney(client.money);
+            client.uIView.uIController.AddMoney(client.money);
             client.bought = true;
+            client.aim.queue[client.queuePos].isBusy = false;
+            client.aim.ResetTimer(client.queuePos);
+
+
+
             client.StateMachine.ChangeState(client.StateMachine.ClientWalkState);
-            client.aim.buyTime = 7f;
         }
 
     }
     public void Exit()
     {
-        Debug.Log("Exit buy state");
+        Debug.Log($"{client.gameObject.name} Exit buy state");
     }
 
 
