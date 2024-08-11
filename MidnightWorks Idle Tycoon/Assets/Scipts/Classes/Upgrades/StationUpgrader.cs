@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StationUnpgrader : MonoBehaviour
+public class StationUpgrader : MonoBehaviour
 {
 
-    public Button button1, button2;
+    public Button button1, button2, button3;
     public Station station;
 
     [HideInInspector]
     public UIView uIView;
+    public GameObject stationUI;
+
 
     void Start()
     {
@@ -21,6 +23,12 @@ public class StationUnpgrader : MonoBehaviour
             IncreaseCapacity();
         });
         button2.onClick.AddListener(() => { DecreaseTime(); });
+
+        button3.onClick.AddListener(() =>
+        {
+            stationUI.SetActive(false);
+            Time.timeScale = 1;
+        });
     }
 
     public void IncreaseCapacity()

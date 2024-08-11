@@ -33,7 +33,7 @@ public class CameraContoller : MonoBehaviour
         {
             isRot = false;
         }
-        if (isRot)
+        if (isRot && Time.timeScale != 0f)
         {
             Vector3 aimVector = Input.mousePosition;
             Vector3 myVec = new Vector3((gameObject.transform.position.x + (str - aimVector).x), gameObject.transform.position.y, (gameObject.transform.position.z + (str - aimVector).y));

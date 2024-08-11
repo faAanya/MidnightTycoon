@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+
 
 public class Station : MonoBehaviour
 {
     public Timer[] queue;
     public float buyTime;
 
+    [SerializeField]
+    public InputActionMap input;
     public int capacity;
 
     void Start()
