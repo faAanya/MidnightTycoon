@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Cache;
 using UnityEngine;
 
 public class UIController
@@ -27,6 +28,14 @@ public class UIController
     public void SpendHearts(int hearts)
     {
         uIModel.CurrentHearts -= hearts;
+    }
+    public void Exchange(int hearts, float course)
+    {
+        float addedMoney = hearts * course;
+        Debug.Log($"I added money {addedMoney}");
+
+        AddMoney(addedMoney);
+        SpendHearts(hearts);
     }
 
 

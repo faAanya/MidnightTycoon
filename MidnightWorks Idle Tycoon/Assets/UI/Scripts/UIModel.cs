@@ -1,14 +1,16 @@
 using System;
 public class UIModel
 {
-    public event Action<float> OnMoneyChanged;
+    public event Action<float> OnMoneyChanged, OnCourseChanged;
     public event Action<int> OnHertsChanged;
-    private float currentMoney;
+    private float currentMoney, currentCourse;
     private int currentHearts;
 
-    public UIModel(float startMoney = 0, int startHearts = 0)
+    public UIModel(float startMoney = 0, int startHearts = 0, float startCourse = 4)
     {
         CurrentMoney = startMoney;
+        CurrentHearts = startHearts;
+        CurrentCourse = startCourse;
     }
     public float CurrentMoney
     {
@@ -32,6 +34,19 @@ public class UIModel
             {
                 currentHearts = value;
                 OnHertsChanged?.Invoke(currentHearts);
+            }
+
+        }
+    }
+    public float CurrentCourse
+    {
+        get => currentCourse;
+        set
+        {
+            if (CurrentCourse != value)
+            {
+                currentCourse = value;
+                OnCourseChanged?.Invoke(currentCourse);
             }
 
         }
