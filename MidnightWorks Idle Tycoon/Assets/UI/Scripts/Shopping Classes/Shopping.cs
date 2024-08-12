@@ -7,13 +7,13 @@ public class Shopping : MonoBehaviour
 {
     public UIView uIView;
     public ShopSO[] products;
-    public Button buttun;
+    public Button button;
 
     private void Start()
     {
         for (int i = 0; i < products.Length; i++)
         {
-            GameObject newButton = Instantiate(buttun.gameObject, transform.position, Quaternion.identity);
+            GameObject newButton = Instantiate(button.gameObject, transform.position, Quaternion.identity);
             newButton.gameObject.transform.SetParent(gameObject.transform, false);
             int myI = i;
             newButton.GetComponent<Button>().onClick.AddListener(() =>
@@ -26,7 +26,7 @@ public class Shopping : MonoBehaviour
         }
     }
 
-    public void Buy(ShopSO shopSO)
+    public virtual void Buy(ShopSO shopSO)
     {
 
         //todo: write buy code

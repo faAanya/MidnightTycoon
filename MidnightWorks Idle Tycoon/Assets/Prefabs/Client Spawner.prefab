@@ -47,4 +47,5 @@ MonoBehaviour:
   counter: 0
   coolDown: 3
   canSpawn: 0
-  client: {fileID: 8406845055882037674, guid: 36621476210b2c649b8aeea96b7c2587, type: 3}
+  clients:
+  - {fileID: 8406845055882037674, guid: 36621476210b2c649b8aeea96b7c2587, type: 3}

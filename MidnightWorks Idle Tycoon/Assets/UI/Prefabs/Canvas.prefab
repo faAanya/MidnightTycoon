@@ -195,19 +195,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9005366631770188959}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2769164081567723127}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &334088913636243655
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,7 +638,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2365777584906082779
 RectTransform:
   m_ObjectHideFlags: 0
@@ -790,7 +778,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 720, y: 1080}
+  m_ReferenceResolution: {x: 1080, y: 720}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1930,6 +1918,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5942511875928652245}
+  - component: {fileID: 6820004132917230252}
   m_Layer: 5
   m_Name: Shop
   m_TagString: Untagged
@@ -1958,6 +1947,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6820004132917230252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6180435128742983875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627626f2d0f49e04087ad4b69b2d40b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopBlock: {fileID: 2769164081567723127}
+  openButton: {fileID: 8868032765679577011}
+  exitButton: {fileID: 6286799819251933590}
 --- !u!1 &6401670141880477921
 GameObject:
   m_ObjectHideFlags: 0
@@ -3880,7 +3884,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5068637512407913419, guid: 2260a6ffafbc338459324ac0c4b05c5e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7223266461619410389}
   m_SourcePrefab: {fileID: 100100000, guid: 2260a6ffafbc338459324ac0c4b05c5e, type: 3}
 --- !u!224 &2512756640469447931 stripped
 RectTransform:
@@ -3888,3 +3896,27 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 3229132361333995998}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7676179064239745557 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5068637512407913419, guid: 2260a6ffafbc338459324ac0c4b05c5e,
+    type: 3}
+  m_PrefabInstance: {fileID: 3229132361333995998}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7223266461619410389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7676179064239745557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fac41e55e103e8e438bf98b41671ac0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uIView: {fileID: 8892816938681379051}
+  products:
+  - {fileID: 11400000, guid: bda6a21e8d7f61a459688014f16d44b0, type: 2}
+  - {fileID: 11400000, guid: 116605054495b6244a495c63eface2e8, type: 2}
+  - {fileID: 11400000, guid: 3cae65c3c10a38d40b105a76fb4ae38e, type: 2}
+  button: {fileID: 4145410056538530993, guid: 68e3babac4e040746a470ccbca125122, type: 3}

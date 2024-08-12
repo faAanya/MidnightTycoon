@@ -220,7 +220,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7638441098479520063}
   - component: {fileID: 2755208466296795026}
-  - component: {fileID: 6626908617594797667}
   m_Layer: 5
   m_Name: Buy Buttons
   m_TagString: Untagged
@@ -271,24 +270,6 @@ MonoBehaviour:
   m_Spacing: {x: 20, y: 20}
   m_Constraint: 1
   m_ConstraintCount: 3
---- !u!114 &6626908617594797667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5068637512407913419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c108409abc2687c458fd36f0fb54139b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uIView: {fileID: 0}
-  products:
-  - {fileID: 11400000, guid: bda6a21e8d7f61a459688014f16d44b0, type: 2}
-  - {fileID: 11400000, guid: 116605054495b6244a495c63eface2e8, type: 2}
-  - {fileID: 11400000, guid: 3cae65c3c10a38d40b105a76fb4ae38e, type: 2}
-  buttun: {fileID: 4145410056538530993, guid: 68e3babac4e040746a470ccbca125122, type: 3}
 --- !u!1 &6912194560311887990
 GameObject:
   m_ObjectHideFlags: 0

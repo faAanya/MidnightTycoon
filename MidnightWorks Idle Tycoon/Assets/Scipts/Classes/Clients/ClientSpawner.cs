@@ -9,7 +9,7 @@ public class ClientSpawner : MonoBehaviour
     public bool canSpawn;
 
 
-    public GameObject client;
+    public List<GameObject> clients;
     void Start()
     {
         canSpawn = true;
@@ -20,7 +20,8 @@ public class ClientSpawner : MonoBehaviour
         if (canSpawn)
         {
             System.Random random = new System.Random();
-            GameObject newClient = Instantiate(client, gameObject.transform.position, Quaternion.identity);
+
+            GameObject newClient = Instantiate(clients[random.Next(0, clients.Count)], gameObject.transform.position, Quaternion.identity);
             counter++;
             newClient.name = $"Client № {counter}";
             canSpawn = false;
