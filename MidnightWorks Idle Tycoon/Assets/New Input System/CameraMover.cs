@@ -48,10 +48,7 @@ public class CameraMover : MonoBehaviour
         }
         if (isRot && Time.timeScale != 0f)
         {
-            Vector3 aimVector = pos;
-            Vector3 myVec = new Vector3(-(gameObject.transform.position.x + pos.x), gameObject.transform.position.y, -(gameObject.transform.position.z + pos.y));
-            Vector3 vector3 = Quaternion.AngleAxis(0, Vector3.up) * myVec;
-            gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, vector3, speed);
+            gameObject.transform.position -= new Vector3(pos.x, 0, pos.y) * 0.01f;
         }
     }
 }

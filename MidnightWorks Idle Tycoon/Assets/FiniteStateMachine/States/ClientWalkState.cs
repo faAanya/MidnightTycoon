@@ -14,7 +14,7 @@ public class ClientWalkState : IState
 
     public void Enter()
     {
-        // Debug.Log($"{client.gameObject.name} Walk state");
+
     }
     void IState.Update()
     {

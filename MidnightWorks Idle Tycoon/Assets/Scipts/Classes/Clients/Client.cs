@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Client : MonoBehaviour
@@ -29,6 +30,9 @@ public class Client : MonoBehaviour
         aim = FindAnyObjectByType<Station>();
         rb = GetComponent<Rigidbody>();
         StateMachine = new StateMachine(this);
+
+        aim = FindClosestallStation();
+
         StateMachine.Initialize(StateMachine.ClientWalkState);
         startPos = gameObject.transform.position;
 
@@ -47,5 +51,22 @@ public class Client : MonoBehaviour
     {
         client.transform.position = Vector3.MoveTowards(client.transform.position, target, speed);
     }
+    Station FindClosestallStation() //looks for closest cafe
+    {
+        float distanceToClosestStation = Mathf.Infinity;
+        Station closestStation = null;
+        IEnumerable<Station> allStations = FindObjectsOfType<Station>();
 
+        foreach (Station currentStation in allStations)
+        {
+            float distanceToStation = (currentStation.transform.position - this.transform.position).sqrMagnitude;
+            if (distanceToStation < distanceToClosestStation)
+            {
+                distanceToClosestStation = distanceToStation;
+                closestStation = currentStation;
+            }
+        }
+        return closestStation;
+
+    }
 }
