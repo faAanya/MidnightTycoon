@@ -7,23 +7,19 @@ using System.Collections.Generic;
 public class GameData
 {
 
-    // public List<WeaponDataSO> playerWeaponInventory;
-    // public List<float> musicSettings;
-    // public bool[] levels;
 
-    // public float money;
+    public List<float> musicSettings;
+    public bool[] levels;
 
-    // public int localisationLang;
-    //public InventoryToSave inventoryToSave;
+    public float money, course;
+    public int hearts;
+
+    public int localisationLang;
 
     public GameData()
     {
-        // localisationLang = 1;
-        // money = 100;
-        // levels = new bool[2];
-        // levels[0] = true;
-        // musicSettings = new List<float>(3);
-        // playerWeaponInventory = new List<WeaponDataSO>();
-        //inventoryToSave = new InventoryToSave();
+        money = 5;
+        course = 2;
+        hearts = 3;
     }
 }

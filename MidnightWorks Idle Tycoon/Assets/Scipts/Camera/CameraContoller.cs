@@ -11,6 +11,8 @@ public class CameraContoller : MonoBehaviour
     [Range(0, .01f)]
     public float speed;
 
+
+    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -23,7 +25,7 @@ public class CameraContoller : MonoBehaviour
         {
             isRot = false;
         }
-        if (isRot && Time.timeScale != 0f)
+        if (isRot)
         {
             Vector3 aimVector = Input.mousePosition;
             Vector3 myVec = new Vector3((gameObject.transform.position.x + (str - aimVector).x), gameObject.transform.position.y, (gameObject.transform.position.z + (str - aimVector).y));

@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1b33aac811a3a74784fcc94a84c8000, type: 3}
-  m_Name: Client 2
+  m_Script: {fileID: 11500000, guid: e92bf9eaef270b841bd16dece524da78, type: 3}
+  m_Name: Upgrader
   m_EditorClassIdentifier: 
-  cost: 0
-  product: {fileID: 2602231374797837610, guid: 855c90c429434444fbe3ca2b5507ab04, type: 3}
+  capacityCost: 5
+  timeCost: 5
+  courseCost: 5

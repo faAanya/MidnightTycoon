@@ -29,10 +29,10 @@ public class UIController
     {
         uIModel.CurrentHearts -= hearts;
     }
+
     public void Exchange(int hearts, float course)
     {
         float addedMoney = hearts * course;
-        Debug.Log($"I added money {addedMoney}");
 
         AddMoney(addedMoney);
         SpendHearts(hearts);

@@ -21,7 +21,6 @@ public class Shopping : MonoBehaviour
                 if (uIView.uIModel.CurrentMoney >= products[myI].cost)
                 {
                     Buy(products[myI]);
-
                 }
             });
         }

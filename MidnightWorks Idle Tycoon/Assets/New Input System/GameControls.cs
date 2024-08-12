@@ -28,10 +28,19 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
             ""id"": ""4955afa2-682f-4dbd-b2a6-820a35c00ee0"",
             ""actions"": [
                 {
-                    ""name"": ""Move Screen"",
+                    ""name"": ""Tap"",
                     ""type"": ""Button"",
                     ""id"": ""b220785d-d7be-4786-a5d7-106e420bdc53"",
                     ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Move Screen"",
+                    ""type"": ""Value"",
+                    ""id"": ""af2db558-3958-42d3-8473-a36f032d6a4e"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -42,6 +51,17 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""976fc0ae-97e2-4915-bb9d-16fa5d7cf322"",
                     ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mouse"",
+                    ""action"": ""Tap"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8b9671b1-a69a-44ad-ba8f-f12e74726458"",
+                    ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Mouse"",
@@ -79,6 +99,7 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
 }");
         // Controls
         m_Controls = asset.FindActionMap("Controls", throwIfNotFound: true);
+        m_Controls_Tap = m_Controls.FindAction("Tap", throwIfNotFound: true);
         m_Controls_MoveScreen = m_Controls.FindAction("Move Screen", throwIfNotFound: true);
     }
 
@@ -141,11 +162,13 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
     // Controls
     private readonly InputActionMap m_Controls;
     private List<IControlsActions> m_ControlsActionsCallbackInterfaces = new List<IControlsActions>();
+    private readonly InputAction m_Controls_Tap;
     private readonly InputAction m_Controls_MoveScreen;
     public struct ControlsActions
     {
         private @GameControls m_Wrapper;
         public ControlsActions(@GameControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Tap => m_Wrapper.m_Controls_Tap;
         public InputAction @MoveScreen => m_Wrapper.m_Controls_MoveScreen;
         public InputActionMap Get() { return m_Wrapper.m_Controls; }
         public void Enable() { Get().Enable(); }
@@ -156,6 +179,9 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_ControlsActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_ControlsActionsCallbackInterfaces.Add(instance);
+            @Tap.started += instance.OnTap;
+            @Tap.performed += instance.OnTap;
+            @Tap.canceled += instance.OnTap;
             @MoveScreen.started += instance.OnMoveScreen;
             @MoveScreen.performed += instance.OnMoveScreen;
             @MoveScreen.canceled += instance.OnMoveScreen;
@@ -163,6 +189,9 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
 
         private void UnregisterCallbacks(IControlsActions instance)
         {
+            @Tap.started -= instance.OnTap;
+            @Tap.performed -= instance.OnTap;
+            @Tap.canceled -= instance.OnTap;
             @MoveScreen.started -= instance.OnMoveScreen;
             @MoveScreen.performed -= instance.OnMoveScreen;
             @MoveScreen.canceled -= instance.OnMoveScreen;
@@ -203,6 +232,7 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
     }
     public interface IControlsActions
     {
+        void OnTap(InputAction.CallbackContext context);
         void OnMoveScreen(InputAction.CallbackContext context);
     }
 }

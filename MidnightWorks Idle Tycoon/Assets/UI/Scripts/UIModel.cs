@@ -1,16 +1,15 @@
 using System;
+using UnityEngine;
 public class UIModel
 {
     public event Action<float> OnMoneyChanged, OnCourseChanged;
-    public event Action<int> OnHertsChanged;
+    public event Action<int> OnHeartsChanged;
     private float currentMoney, currentCourse;
     private int currentHearts;
 
-    public UIModel(float startMoney = 0, int startHearts = 0, float startCourse = 4)
+    public UIModel()
     {
-        CurrentMoney = startMoney;
-        CurrentHearts = startHearts;
-        CurrentCourse = startCourse;
+
     }
     public float CurrentMoney
     {
@@ -33,7 +32,7 @@ public class UIModel
             if (currentHearts != value)
             {
                 currentHearts = value;
-                OnHertsChanged?.Invoke(currentHearts);
+                OnHeartsChanged?.Invoke(currentHearts);
             }
 
         }
@@ -51,5 +50,6 @@ public class UIModel
 
         }
     }
+
 
 }
