@@ -14,7 +14,7 @@ public class ClientWalkState : IState
 
     public void Enter()
     {
-        Debug.Log($"{client.gameObject.name} Walk state");
+        // Debug.Log($"{client.gameObject.name} Walk state");
     }
     void IState.Update()
     {
@@ -30,9 +30,14 @@ public class ClientWalkState : IState
         if (client.bought && !client.canSit)
         {
             client.MoveClient(client.gameObject, client.startPos, .33f);
-
         }
+        else if (client.canSit)
+        {
+            client.StateMachine.ChangeState(client.StateMachine.ClientSitState);
+        }
+
     }
+
     public void Exit()
     {
 

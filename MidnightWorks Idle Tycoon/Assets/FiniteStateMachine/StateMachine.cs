@@ -9,6 +9,7 @@ public class StateMachine
     public ClientWalkState ClientWalkState;
     public ClientBuyState ClientBuyState;
     public ClientWaitState ClientWaitState;
+    public ClientSitState ClientSitState;
 
 
 
@@ -17,6 +18,7 @@ public class StateMachine
         this.ClientWalkState = new ClientWalkState(client);
         this.ClientBuyState = new ClientBuyState(client);
         this.ClientWaitState = new ClientWaitState(client);
+        this.ClientSitState = new ClientSitState(client);
     }
 
     public void Initialize(IState StartingState)

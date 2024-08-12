@@ -23,6 +23,7 @@ public class InputFunctions : MonoBehaviour
 
     public void OnClick(InputAction.CallbackContext context)
     {
+
         if (context.started && Time.timeScale != 0)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -50,7 +51,7 @@ public class InputFunctions : MonoBehaviour
         Debug.Log(pos);
         if (mouseClicked)
         {
-            Debug.Log("True");
+
             isRot = true;
             str = pos;
         }

@@ -837,7 +837,9 @@ MonoBehaviour:
   canSit: 0
   hearts: 1
   money: 5
+  timeToSit: 5
   queuePos: 0
+  chair: {fileID: 0}
 --- !u!1 &8406845055918955520
 GameObject:
   m_ObjectHideFlags: 0

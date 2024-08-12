@@ -12,10 +12,13 @@ public class ClientBuyState : IState
 
     public void Enter()
     {
-        Debug.Log($"{client.gameObject.name} Buy State");
+        // Debug.Log($"{client.gameObject.name} Buy State");
     }
     public void Update()
     {
+        Chair[] chairs = GameObject.FindObjectsByType<Chair>(sortMode: FindObjectsSortMode.None);
+
+
         client.aim.StartTimer(client.queuePos);
         if (client.aim.queue[client.queuePos].buyTime <= 0 && !client.canSit)
         {
@@ -27,7 +30,18 @@ public class ClientBuyState : IState
             client.aim.queue[client.queuePos].isBusy = false;
             client.aim.ResetTimer(client.queuePos);
 
+            for (int i = 0; i < chairs.Length; i++)
+            {
 
+                if (!chairs[i].isBusy)
+                {
+                    chairs[i].isBusy = true;
+                    client.canSit = true;
+                    client.chair = chairs[i].gameObject;
+                    Debug.Log(client.chair.name);
+                    break;
+                }
+            }
 
             client.StateMachine.ChangeState(client.StateMachine.ClientWalkState);
         }
@@ -35,7 +49,7 @@ public class ClientBuyState : IState
     }
     public void Exit()
     {
-        Debug.Log($"{client.gameObject.name} Exit buy state");
+        // Debug.Log($"{client.gameObject.name} Exit buy state");
     }
 
 

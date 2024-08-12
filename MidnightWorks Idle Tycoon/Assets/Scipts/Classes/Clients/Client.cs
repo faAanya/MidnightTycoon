@@ -14,14 +14,17 @@ public class Client : MonoBehaviour
 
     public bool canSit = false;
     public int hearts;
-    public float money;
+    public float money, timeToSit;
 
     public int queuePos = 0;
+
+    public GameObject chair;
 
     public StateMachine StateMachine { get; private set; }
 
     void Start()
     {
+        chair = null;
         uIView = FindAnyObjectByType<UIView>();
         aim = FindAnyObjectByType<Station>();
         rb = GetComponent<Rigidbody>();
@@ -32,6 +35,10 @@ public class Client : MonoBehaviour
     }
     void Update()
     {
+        if (bought && transform.position == startPos)
+        {
+            Destroy(gameObject);
+        }
         StateMachine.Update();
     }
 
