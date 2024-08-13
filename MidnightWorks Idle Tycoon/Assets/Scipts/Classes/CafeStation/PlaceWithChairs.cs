@@ -1,32 +1,51 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlaceWithChairs : MonoBehaviour
 {
-    public Chair[] chairsGO;
-    public Chair chair;
-    public int capacity = 2;
 
+    public List<GameObject> chairsGO;
+    public Chair chair;
+    public int capacity = 0;
+    public int maxCapacity = 4;
     private void Awake()
     {
-        chairsGO = new Chair[capacity];
-
-        for (int i = 0; i < capacity; i++)
+        chairsGO = new List<GameObject>(capacity);
+        for (int i = 0, j = 0; i < capacity && j < 360; i++, j += 360 / capacity)
         {
-            GameObject newChair = Instantiate(chair.gameObject, new Vector3(transform.position.x, transform.position.y, transform.position.z + i * 5), Quaternion.identity);
-            newChair.transform.SetParent(transform);
+            Vector3 pos = new Vector3(3 * Mathf.Cos(j * Mathf.PI / 180) + transform.position.x, transform.position.y, 3 * Mathf.Sin(j * Mathf.PI / 180) + transform.position.z);
+            GameObject newChair = Instantiate(chair.gameObject, pos, Quaternion.Euler(0, (j + 180f) * Mathf.Pow(-1, i), 0));
+            chairsGO.Add(newChair);
+            chairsGO[i].GetComponent<Chair>().isBusy = false;
+
+            newChair.transform.SetParent(gameObject.transform);
         }
 
-        for (int i = 0; i < capacity; i++)
-        {
-            chairsGO[i] = chair;
-            chairsGO[i].isBusy = false;
-        }
+
+
     }
-    void Update()
+
+    public void BuildChairs()
     {
 
+        for (int i = 0, j = 0; i < capacity && j < 360; i++, j += 360 / capacity)
+        {
+            Vector3 pos = new Vector3(3 * Mathf.Cos(j * Mathf.PI / 180) + transform.position.x, transform.position.y, 3 * Mathf.Sin(j * Mathf.PI / 180) + transform.position.z);
+            chairsGO[i].transform.position = pos;
+            chairsGO[i].transform.rotation = Quaternion.Euler(0, (j + 180f) * Mathf.Pow(-1, i), 0);
 
+            chairsGO[i].transform.SetParent(gameObject.transform);
+        }
     }
+
+    public void DestroyChairs()
+    {
+        for (int i = 0; i < gameObject.transform.childCount; i++)
+        {
+            Destroy(gameObject.transform.GetChild(i).gameObject);
+        }
+    }
+
 }

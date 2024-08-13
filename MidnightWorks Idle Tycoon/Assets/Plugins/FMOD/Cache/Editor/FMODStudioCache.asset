@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7019914807311792160
+--- !u!114 &-8961543749456066687
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
   Path: "../../../Users/\u041F\u043E\u043B\u0438\u043D\u0430 \u041A\u0438\u0440\u043F\u0438\u0447\u0451\u043D\u043E\u043A/Documents/FMOD
-    Studio/MidnightTycoon/Build/Desktop/Master.bank"
+    Studio/MidnightIdleTycoonWorkable/Build/Desktop/Master.bank"
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638588160874741281
+  lastModified: 638591509876437982
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -34,17 +34,89 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 6787561995576741089}
-  - {fileID: -7019914807311792160}
-  EditorEvents: []
+  - {fileID: 6915716356035711026}
+  - {fileID: -8961543749456066687}
+  - {fileID: 1630574247148401067}
+  - {fileID: 5709937630149473750}
+  EditorEvents:
+  - {fileID: 1138564639967925624}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -7019914807311792160}
+  - {fileID: -8961543749456066687}
   StringsBanks:
-  - {fileID: 6787561995576741089}
-  cacheTime: 638588160874781172
+  - {fileID: 6915716356035711026}
+  cacheTime: 638591509876722618
   cacheVersion: 131619
---- !u!114 &6787561995576741089
+--- !u!114 &1138564639967925624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music
+  Guid:
+    Data1: 280474682
+    Data2: 1336723484
+    Data3: -1686145405
+    Data4: -30216967
+  Banks:
+  - {fileID: 1630574247148401067}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 34162
+--- !u!114 &1630574247148401067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: "../../../Users/\u041F\u043E\u043B\u0438\u043D\u0430 \u041A\u0438\u0440\u043F\u0438\u0447\u0451\u043D\u043E\u043A/Documents/FMOD
+    Studio/MidnightIdleTycoonWorkable/Build/Desktop/Music.bank"
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 638591509876722618
+  FileSizes:
+  - Name: Desktop
+    Value: 636000
+  Exists: 1
+--- !u!114 &5709937630149473750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: "../../../Users/\u041F\u043E\u043B\u0438\u043D\u0430 \u041A\u0438\u0440\u043F\u0438\u0447\u0451\u043D\u043E\u043A/Documents/FMOD
+    Studio/MidnightIdleTycoonWorkable/Build/Desktop/SFX.bank"
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638591509740898031
+  FileSizes:
+  - Name: Desktop
+    Value: 494
+  Exists: 1
+--- !u!114 &6915716356035711026
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,11 +129,11 @@ MonoBehaviour:
   m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
   Path: "../../../Users/\u041F\u043E\u043B\u0438\u043D\u0430 \u041A\u0438\u0440\u043F\u0438\u0447\u0451\u043D\u043E\u043A/Documents/FMOD
-    Studio/MidnightTycoon/Build/Desktop/Master.strings.bank"
+    Studio/MidnightIdleTycoonWorkable/Build/Desktop/Master.strings.bank"
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638588160874781172
+  lastModified: 638591509876448092
   FileSizes:
   - Name: Desktop
-    Value: 712
+    Value: 848
   Exists: 1

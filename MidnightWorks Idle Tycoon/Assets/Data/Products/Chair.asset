@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1b33aac811a3a74784fcc94a84c8000, type: 3}
   m_Name: Chair
   m_EditorClassIdentifier: 
-  cost: 0
-  product: {fileID: 0}
+  cost: 5
+  product: {fileID: 7212027940949690738, guid: 600c731dedb38e945b33c60c962c2d32, type: 3}

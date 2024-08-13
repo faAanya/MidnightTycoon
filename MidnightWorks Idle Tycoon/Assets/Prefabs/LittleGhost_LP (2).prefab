@@ -738,8 +738,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.39000002, y: 0.39000002, z: 0.39000002}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8406845055233984904}
   - {fileID: 8406845055089693554}
@@ -837,7 +837,7 @@ MonoBehaviour:
   canSit: 0
   hearts: 1
   money: 5
-  timeToSit: 5
+  timeToSit: 10
   queuePos: 0
   chair: {fileID: 0}
 --- !u!1 &8406845055918955520

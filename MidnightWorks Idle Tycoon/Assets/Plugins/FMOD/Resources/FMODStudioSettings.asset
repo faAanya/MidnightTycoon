@@ -391,9 +391,9 @@ MonoBehaviour:
   HasSourceProject: 1
   HasPlatforms: 1
   sourceProjectPath: "../../../Users/\u041F\u043E\u043B\u0438\u043D\u0430 \u041A\u0438\u0440\u043F\u0438\u0447\u0451\u043D\u043E\u043A/Documents/FMOD
-    Studio/MidnightTycoon/MidnightTycoon.fspro"
+    Studio/MidnightIdleTycoonWorkable/MidnightIdleTycoonWorkable.fspro"
   sourceBankPath: "../../../Users/\u041F\u043E\u043B\u0438\u043D\u0430 \u041A\u0438\u0440\u043F\u0438\u0447\u0451\u043D\u043E\u043A/Documents/FMOD
-    Studio/MidnightTycoon/Build"
+    Studio/MidnightIdleTycoonWorkable/Build"
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
@@ -416,7 +416,9 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master
-  Banks: []
+  Banks:
+  - Music
+  - SFX
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
