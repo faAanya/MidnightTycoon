@@ -12,9 +12,12 @@ public class Exchanger : MonoBehaviour
     public Button exchange;
 
     public TextMeshProUGUI min, max, current;
+    public Button openButton, closeButton;
+    public GameObject exchangeOpen;
     void Start()
     {
-
+        openButton.onClick.AddListener(() => { exchangeOpen.SetActive(true); Time.timeScale = 0; });
+        closeButton.onClick.AddListener(() => { exchangeOpen.SetActive(false); Time.timeScale = 1; });
 
 
         min.text = slider.minValue.ToString();
