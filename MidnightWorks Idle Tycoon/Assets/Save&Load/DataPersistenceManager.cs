@@ -21,13 +21,8 @@ public class DataPersistenceManager : MonoBehaviour
 
     private void Start()
     {
-        if (dataHandler == null)
-        {
-            dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
-        }
 
-        dataPersistenceObjects = FindAllDataPersistenceObjects();
-        LoadGame();
+
     }
 
     private List<IDataPersistence> FindAllDataPersistenceObjects()
@@ -48,6 +43,13 @@ public class DataPersistenceManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (dataHandler == null)
+        {
+            dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
+        }
+
+        dataPersistenceObjects = FindAllDataPersistenceObjects();
+        LoadGame();
     }
 
     public void NewGame()
@@ -69,6 +71,8 @@ public class DataPersistenceManager : MonoBehaviour
         {
             dataPersistence.LoadData(gameData);
         }
+        gameData.stationWrapper = new List<StationState>();
+        gameData.placeWithChairsWrapper = new List<PlaceWithChairsState>();
     }
 
     public void SaveGame()
@@ -78,7 +82,8 @@ public class DataPersistenceManager : MonoBehaviour
             dataPersistence.SaveData(ref gameData);
         }
         dataHandler.Save(gameData);
-
+        gameData.stationWrapper = new List<StationState>();
+        gameData.placeWithChairsWrapper = new List<PlaceWithChairsState>();
     }
 
 

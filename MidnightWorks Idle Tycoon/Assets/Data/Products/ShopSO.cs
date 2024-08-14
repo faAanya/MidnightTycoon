@@ -5,4 +5,5 @@ public class ShopSO : ScriptableObject
 {
     public float cost;
     public GameObject product;
+    public string productName;
 }

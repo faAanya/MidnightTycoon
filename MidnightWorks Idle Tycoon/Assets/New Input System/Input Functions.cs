@@ -4,7 +4,6 @@ using UnityEngine.InputSystem;
 public class InputFunctions : MonoBehaviour
 {
 
-    public GameObject stationUI;
     private Camera _mainCamera;
 
     public bool mouseClicked = false;
@@ -31,7 +30,7 @@ public class InputFunctions : MonoBehaviour
             if (Physics.Raycast(ray, out hit) && hit.transform.gameObject.tag == "Station")
             {
                 Debug.Log(hit.transform.name);
-                stationUI.SetActive(true);
+                hit.transform.gameObject.GetComponent<Station>().stationUI.SetActive(true);
                 Time.timeScale = 0;
             }
         }

@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 
-public class Station : MonoBehaviour
+public class Station : MonoBehaviour, IDataPersistence
 {
     public Timer[] queue;
     public float buyTime;
 
     public int capacity;
+
+    public GameObject stationUI;
 
     void Start()
     {
@@ -35,6 +38,33 @@ public class Station : MonoBehaviour
     {
         queue[index] = new Timer(buyTime, false);
     }
+
+    public void LoadData(GameData gameData)
+    {
+        foreach (var item in gameData.stationWrapper)
+        {
+            if (item.stationNameSave == gameObject.name)
+            {
+                buyTime = item.buyTimeSave;
+                capacity = item.capacitySave;
+                break;
+            }
+        }
+
+    }
+
+    public void SaveData(ref GameData gameData)
+    {
+
+        StationState stationState = new StationState();
+        stationState.buyTimeSave = buyTime;
+        stationState.capacitySave = capacity;
+        stationState.stationNameSave = gameObject.name;
+        gameData.stationWrapper.Add(stationState);
+
+
+    }
+
 }
 
 public class Timer
