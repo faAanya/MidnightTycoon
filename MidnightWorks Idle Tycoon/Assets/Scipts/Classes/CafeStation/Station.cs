@@ -29,7 +29,7 @@ public class Station : MonoBehaviour, IDataPersistence
         }
         else
         {
-            GetComponent<Station>().enabled = true;
+
             GetComponent<PlayerInput>().enabled = true;
             GetComponent<BoxCollider>().enabled = true;
             allComponents.SetActive(true);
@@ -94,7 +94,6 @@ public class Timer
     {
         buyTime = timer;
         isBusy = busy;
-        Debug.Log("I exist");
     }
     public float buyTime;
     public bool isBusy;

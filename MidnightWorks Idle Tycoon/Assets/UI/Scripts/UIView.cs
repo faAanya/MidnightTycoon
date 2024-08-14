@@ -11,15 +11,19 @@ public class UIView : MonoBehaviour, IDataPersistence
 
     private void Awake()
     {
+
         uIModel = new UIModel();
         uIController = new UIController(uIModel);
         uIModel.OnMoneyChanged += UpdateMoneyText;
         uIModel.OnHeartsChanged += UpdateHeartsText;
         uIModel.OnCourseChanged += UpdateCourseText;
 
+        moneyText.text = uIModel.CurrentMoney.ToString();
+        heartsText.text = uIModel.CurrentHearts.ToString();
+        courseText.text = uIModel.CurrentCourse.ToString();
     }
 
-    private void UpdateMoneyText(float money)
+    private void UpdateMoneyText(int money)
     {
         moneyText.text = money.ToString();
     }
@@ -27,7 +31,7 @@ public class UIView : MonoBehaviour, IDataPersistence
     {
         heartsText.text = hearts.ToString();
     }
-    private void UpdateCourseText(float course)
+    private void UpdateCourseText(int course)
     {
         courseText.text = $"1 : {course}";
     }

@@ -525,6 +525,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5371094928146974611, guid: ec4106cf4905498488cf55ff89692f64,
+        type: 3}
+      propertyPath: m_Name
+      value: Chair (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 7740192327496021776, guid: ec4106cf4905498488cf55ff89692f64,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -942,51 +947,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 97, y: -30, z: 0}
---- !u!1 &826446737
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 826446739}
-  - component: {fileID: 826446738}
-  m_Layer: 0
-  m_Name: Save Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &826446738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 826446737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc1025cdfa9f6bc449824f78c574c8d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fileName: saver.json
---- !u!4 &826446739
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 826446737}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.05521083, y: -0.7826748, z: -17.671158}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &905126215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1463,6 +1423,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1835608654
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1835608656}
+  - component: {fileID: 1835608655}
+  m_Layer: 0
+  m_Name: Save Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1835608655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835608654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc1025cdfa9f6bc449824f78c574c8d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: saver.json
+--- !u!4 &1835608656
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835608654}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.05521083, y: -0.7826748, z: -17.671158}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1839267763
 GameObject:
   m_ObjectHideFlags: 0
@@ -1531,6 +1536,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1840393532 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7982668339770442157, guid: ec4106cf4905498488cf55ff89692f64,
+    type: 3}
+  m_PrefabInstance: {fileID: 1978330154520005275}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1840393538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840393532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e92bf9eaef270b841bd16dece524da78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  capacityCost: 1
+  timeCost: 1
+  courseCost: 1
 --- !u!1001 &2038238861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1598,6 +1624,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5371094928146974611, guid: ec4106cf4905498488cf55ff89692f64,
+        type: 3}
+      propertyPath: m_Name
+      value: Chair (5)
       objectReference: {fileID: 0}
     - target: {fileID: 7851120341407394362, guid: ec4106cf4905498488cf55ff89692f64,
         type: 3}
@@ -1796,10 +1827,19 @@ PrefabInstance:
       propertyPath: uIView
       value: 
       objectReference: {fileID: 229297109}
+    - target: {fileID: 8408824571061600542, guid: ec4106cf4905498488cf55ff89692f64,
+        type: 3}
+      propertyPath: upgraderSO
+      value: 
+      objectReference: {fileID: 1840393538}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7982668339770442157, guid: ec4106cf4905498488cf55ff89692f64,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1840393538}
   m_SourcePrefab: {fileID: 100100000, guid: ec4106cf4905498488cf55ff89692f64, type: 3}
 --- !u!1001 &3955253034535261226
 PrefabInstance:
@@ -2209,6 +2249,6 @@ SceneRoots:
   - {fileID: 2038238861}
   - {fileID: 519924902}
   - {fileID: 2083644145}
-  - {fileID: 826446739}
   - {fileID: 963194228}
   - {fileID: 2095829721}
+  - {fileID: 1835608656}

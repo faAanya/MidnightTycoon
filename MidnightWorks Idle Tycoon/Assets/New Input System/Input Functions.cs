@@ -47,7 +47,6 @@ public class InputFunctions : MonoBehaviour
     public void OnMouseMove(InputAction.CallbackContext context)
     {
         Vector2 pos = context.ReadValue<Vector2>();
-        Debug.Log(pos);
         if (mouseClicked)
         {
 

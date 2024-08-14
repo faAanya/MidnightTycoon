@@ -6,7 +6,7 @@ using UnityEngine;
 [System.Serializable]
 public class ShopSO : ScriptableObject
 {
-    public float cost;
+    public int cost;
     public GameObject product;
     public string productName;
 }

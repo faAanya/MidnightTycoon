@@ -2,16 +2,19 @@ using System;
 using UnityEngine;
 public class UIModel
 {
-    public event Action<float> OnMoneyChanged, OnCourseChanged;
+    public event Action<int> OnMoneyChanged, OnCourseChanged;
     public event Action<int> OnHeartsChanged;
-    private float currentMoney, currentCourse;
+    private int currentMoney, currentCourse;
     private int currentHearts;
 
-    public UIModel()
+    public UIModel(int _startMoney = 100, int _startCourse = 2, int _startHearts = 3)
     {
+        currentMoney = _startMoney;
 
+        currentCourse = _startCourse;
+        currentHearts = _startHearts;
     }
-    public float CurrentMoney
+    public int CurrentMoney
     {
         get => currentMoney;
         set
@@ -37,7 +40,7 @@ public class UIModel
 
         }
     }
-    public float CurrentCourse
+    public int CurrentCourse
     {
         get => currentCourse;
         set

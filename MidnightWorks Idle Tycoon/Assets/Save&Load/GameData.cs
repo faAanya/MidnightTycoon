@@ -12,7 +12,7 @@ public class GameData
     public List<float> musicSettings;
     public bool[] levels;
 
-    public float money, course;
+    public int money, course;
     public int hearts;
 
     public int localisationLang;
@@ -22,15 +22,21 @@ public class GameData
 
     public List<ShopsState> shopsWrapper;
 
+    public UpgraderState upgraderState;
     public GameData()
     {
+        money = 100;
+        course = 2;
+        hearts = 3;
         placeWithChairsWrapper = new List<PlaceWithChairsState>();
         stationWrapper = new List<StationState>();
         shopsWrapper = new List<ShopsState>();
+        upgraderState = new UpgraderState();
+        upgraderState.capacityCost = 1;
+        upgraderState.timeCost = 1;
+        upgraderState.courseCost = 1;
 
-        money = 5;
-        course = 2;
-        hearts = 3;
+
     }
 
 
@@ -57,4 +63,11 @@ public struct ShopsState
     public int placeNameSave;
 
     public int capacitySave;
+}
+[System.Serializable]
+public struct UpgraderState
+{
+    public int capacityCost, timeCost, courseCost;
+
+
 }

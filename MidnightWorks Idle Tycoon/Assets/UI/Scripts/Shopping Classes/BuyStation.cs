@@ -15,7 +15,7 @@ public class BuyStation : Shopping
     }
     public override void Buy(ShopSO shopSO)
     {
-
+        Debug.Log("Click");
         station.GetComponent<Station>().isBought = true;
         station.GetComponent<Station>().Start();
 

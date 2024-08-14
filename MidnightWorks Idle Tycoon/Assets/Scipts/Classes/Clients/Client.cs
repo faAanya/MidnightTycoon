@@ -15,7 +15,8 @@ public class Client : MonoBehaviour
 
     public bool canSit = false;
     public int hearts;
-    public float money, timeToSit;
+    public int money;
+    public float timeToSit;
 
     public int queuePos = 0;
 

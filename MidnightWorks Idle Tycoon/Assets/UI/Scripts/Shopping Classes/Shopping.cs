@@ -30,6 +30,7 @@ public class Shopping : MonoBehaviour
                 }
             });
             newButton.transform.GetChild(0).gameObject.GetComponent<TMP_Text>().text = products[myI].productName;
+            newButton.transform.GetChild(1).gameObject.GetComponent<TMP_Text>().text = products[myI].cost.ToString();
         }
     }
 

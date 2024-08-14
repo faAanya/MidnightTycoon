@@ -45,6 +45,7 @@ public class DataPersistenceManager : MonoBehaviour
         }
         if (dataHandler == null)
         {
+            Debug.Log("null");
             dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
         }
 
@@ -59,13 +60,14 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void LoadGame()
     {
-        gameData = dataHandler.Load();
 
+        gameData = dataHandler.Load();
         if (gameData == null)
         {
             Debug.Log("No data was found");
             NewGame();
         }
+
 
         foreach (IDataPersistence dataPersistence in dataPersistenceObjects)
         {

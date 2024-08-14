@@ -12,12 +12,12 @@ public class UIController
         uIModel = _uIModel;
     }
 
-    public void AddMoney(float money)
+    public void AddMoney(int money)
     {
         uIModel.CurrentMoney += money;
     }
 
-    public void SpendMoney(float money)
+    public void SpendMoney(int money)
     {
         uIModel.CurrentMoney -= money;
     }
@@ -30,9 +30,9 @@ public class UIController
         uIModel.CurrentHearts -= hearts;
     }
 
-    public void Exchange(int hearts, float course)
+    public void Exchange(int hearts, int course)
     {
-        float addedMoney = hearts * course;
+        int addedMoney = hearts * course;
 
         AddMoney(addedMoney);
         SpendHearts(hearts);
