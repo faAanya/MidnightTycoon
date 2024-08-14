@@ -25,8 +25,8 @@ public class Shopping : MonoBehaviour
                 if (uIView.uIModel.CurrentMoney >= products[myI].cost)
                 {
                     Buy(products[myI]);
-                    products.RemoveAt(myI);
-                    Destroy(newButton);
+                    // products.RemoveAt(myI);
+                    newButton.GetComponent<Button>().interactable = false;
                 }
             });
             newButton.transform.GetChild(0).gameObject.GetComponent<TMP_Text>().text = products[myI].productName;
@@ -40,23 +40,23 @@ public class Shopping : MonoBehaviour
 
     }
 
-    // public void LoadData(GameData gameData)
-    // {
-    //     foreach (var item in gameData.shopsWrapper)
-    //     {
-    //         if (item.placeNameSave == this.GetInstanceID())
-    //         {
-    //             products.Capacity = item.capacitySave;
-    //         }
-    //     }
-    // }
+    public void LoadData(GameData gameData)
+    {
+        foreach (var item in gameData.shopsWrapper)
+        {
+            if (item.placeNameSave == this.GetInstanceID())
+            {
+                products.Capacity = item.capacitySave;
+            }
+        }
+    }
 
-    // public void SaveData(ref GameData gameData)
-    // {
-    //     ShopsState shopsState = new ShopsState();
-    //     shopsState.capacitySave = products.Count;
-    //     shopsState.placeNameSave = this.GetInstanceID();
-    //     gameData.shopsWrapper.Add(shopsState);
+    public void SaveData(ref GameData gameData)
+    {
+        ShopsState shopsState = new ShopsState();
+        shopsState.capacitySave = products.Count;
+        shopsState.placeNameSave = this.GetInstanceID();
+        gameData.shopsWrapper.Add(shopsState);
 
-    // }
+    }
 }

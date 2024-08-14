@@ -1536,27 +1536,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1840393532 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7982668339770442157, guid: ec4106cf4905498488cf55ff89692f64,
-    type: 3}
-  m_PrefabInstance: {fileID: 1978330154520005275}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1840393538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1840393532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e92bf9eaef270b841bd16dece524da78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  capacityCost: 1
-  timeCost: 1
-  courseCost: 1
 --- !u!1001 &2038238861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1827,19 +1806,10 @@ PrefabInstance:
       propertyPath: uIView
       value: 
       objectReference: {fileID: 229297109}
-    - target: {fileID: 8408824571061600542, guid: ec4106cf4905498488cf55ff89692f64,
-        type: 3}
-      propertyPath: upgraderSO
-      value: 
-      objectReference: {fileID: 1840393538}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7982668339770442157, guid: ec4106cf4905498488cf55ff89692f64,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1840393538}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec4106cf4905498488cf55ff89692f64, type: 3}
 --- !u!1001 &3955253034535261226
 PrefabInstance:
