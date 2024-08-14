@@ -12,12 +12,29 @@ public class Station : MonoBehaviour, IDataPersistence
 
     public int capacity;
 
-    public bool isBought;
+    public bool isBought = true;
 
-    public GameObject stationUI;
+    public GameObject stationUI, allComponents, buyUI;
 
-    void Start()
+    public void Start()
     {
+        if (!isBought)
+        {
+            allComponents.SetActive(false);
+
+            GetComponent<PlayerInput>().enabled = false;
+            GetComponent<BoxCollider>().enabled = false;
+
+
+        }
+        else
+        {
+            GetComponent<Station>().enabled = true;
+            GetComponent<PlayerInput>().enabled = true;
+            GetComponent<BoxCollider>().enabled = true;
+            allComponents.SetActive(true);
+            Destroy(buyUI.gameObject);
+        }
         queue = new Timer[capacity];
         SetTimers();
     }
@@ -49,6 +66,7 @@ public class Station : MonoBehaviour, IDataPersistence
             {
                 buyTime = item.buyTimeSave;
                 capacity = item.capacitySave;
+                isBought = item.isBoughtSave;
                 break;
             }
         }
@@ -61,6 +79,7 @@ public class Station : MonoBehaviour, IDataPersistence
         StationState stationState = new StationState();
         stationState.buyTimeSave = buyTime;
         stationState.capacitySave = capacity;
+        stationState.isBoughtSave = isBought;
         stationState.stationNameSave = gameObject.name;
         gameData.stationWrapper.Add(stationState);
 

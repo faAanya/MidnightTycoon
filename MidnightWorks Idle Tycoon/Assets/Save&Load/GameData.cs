@@ -40,6 +40,7 @@ public struct StationState
 {
     public string stationNameSave;
     public float buyTimeSave;
+    public bool isBoughtSave;
 
     public int capacitySave;
 }
