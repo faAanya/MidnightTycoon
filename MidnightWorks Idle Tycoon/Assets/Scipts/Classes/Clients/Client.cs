@@ -60,7 +60,7 @@ public class Client : MonoBehaviour
         foreach (Station currentStation in allStations)
         {
             float distanceToStation = (currentStation.transform.position - this.transform.position).sqrMagnitude;
-            if (distanceToStation < distanceToClosestStation)
+            if (distanceToStation < distanceToClosestStation && currentStation.enabled)
             {
                 distanceToClosestStation = distanceToStation;
                 closestStation = currentStation;

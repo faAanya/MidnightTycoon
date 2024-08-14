@@ -20,11 +20,14 @@ public class GameData
     public List<StationState> stationWrapper;
     public List<PlaceWithChairsState> placeWithChairsWrapper;
 
+    public List<ShopsState> shopsWrapper;
 
     public GameData()
     {
         placeWithChairsWrapper = new List<PlaceWithChairsState>();
         stationWrapper = new List<StationState>();
+        shopsWrapper = new List<ShopsState>();
+
         money = 5;
         course = 2;
         hearts = 3;
@@ -44,6 +47,13 @@ public struct StationState
 public struct PlaceWithChairsState
 {
     public string placeNameSave;
+
+    public int capacitySave;
+}
+[System.Serializable]
+public struct ShopsState
+{
+    public int placeNameSave;
 
     public int capacitySave;
 }

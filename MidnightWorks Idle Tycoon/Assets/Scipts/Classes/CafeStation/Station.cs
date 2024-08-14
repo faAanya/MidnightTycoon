@@ -12,6 +12,8 @@ public class Station : MonoBehaviour, IDataPersistence
 
     public int capacity;
 
+    public bool isBought;
+
     public GameObject stationUI;
 
     void Start()

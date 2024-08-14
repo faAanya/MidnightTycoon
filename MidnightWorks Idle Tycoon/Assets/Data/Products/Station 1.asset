@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 100
   product: {fileID: 7851120341407394362, guid: ec4106cf4905498488cf55ff89692f64, type: 3}
+  productName: Station

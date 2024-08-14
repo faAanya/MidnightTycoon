@@ -73,6 +73,7 @@ public class DataPersistenceManager : MonoBehaviour
         }
         gameData.stationWrapper = new List<StationState>();
         gameData.placeWithChairsWrapper = new List<PlaceWithChairsState>();
+        gameData.shopsWrapper = new List<ShopsState>();
     }
 
     public void SaveGame()
@@ -84,6 +85,8 @@ public class DataPersistenceManager : MonoBehaviour
         dataHandler.Save(gameData);
         gameData.stationWrapper = new List<StationState>();
         gameData.placeWithChairsWrapper = new List<PlaceWithChairsState>();
+        gameData.shopsWrapper = new List<ShopsState>();
+
     }
 
 

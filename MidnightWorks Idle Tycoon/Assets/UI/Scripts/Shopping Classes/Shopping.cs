@@ -7,12 +7,15 @@ using UnityEngine.UI;
 public class Shopping : MonoBehaviour
 {
     public UIView uIView;
-    public ShopSO[] products;
+    public List<ShopSO> products;
     public Button button;
 
-    private void Start()
+    public int size;
+
+    public void Start()
     {
-        for (int i = 0; i < products.Length; i++)
+
+        for (int i = 0; i < products.Count; i++)
         {
             GameObject newButton = Instantiate(button.gameObject, transform.position, Quaternion.identity);
             newButton.gameObject.transform.SetParent(gameObject.transform, false);
@@ -22,6 +25,7 @@ public class Shopping : MonoBehaviour
                 if (uIView.uIModel.CurrentMoney >= products[myI].cost)
                 {
                     Buy(products[myI]);
+                    products.RemoveAt(myI);
                     Destroy(newButton);
                 }
             });
@@ -31,11 +35,27 @@ public class Shopping : MonoBehaviour
 
     public virtual void Buy(ShopSO shopSO)
     {
-
-        //todo: write buy code
-
         uIView.uIController.SpendMoney(shopSO.cost);
 
     }
 
+    // public void LoadData(GameData gameData)
+    // {
+    //     foreach (var item in gameData.shopsWrapper)
+    //     {
+    //         if (item.placeNameSave == this.GetInstanceID())
+    //         {
+    //             products.Capacity = item.capacitySave;
+    //         }
+    //     }
+    // }
+
+    // public void SaveData(ref GameData gameData)
+    // {
+    //     ShopsState shopsState = new ShopsState();
+    //     shopsState.capacitySave = products.Count;
+    //     shopsState.placeNameSave = this.GetInstanceID();
+    //     gameData.shopsWrapper.Add(shopsState);
+
+    // }
 }
