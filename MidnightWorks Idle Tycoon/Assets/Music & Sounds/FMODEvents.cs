@@ -15,7 +15,7 @@ public class FMODEvents : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log(gameObject.name);
+
         DontDestroyOnLoad(this);
 
         if (Instance == null)

@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Shopping : MonoBehaviour, IDataPersistence
+public class Shopping : MonoBehaviour
 {
     public UIView uIView;
     public List<ShopSO> products;
@@ -49,31 +49,4 @@ public class Shopping : MonoBehaviour, IDataPersistence
         }
     }
 
-    public void LoadData(GameData gameData)
-    {
-        // for (int i = 0; i < products.Count; i++)
-        // {
-        //     for (int j = 0; j < gameData.shopsWrapper.Count; j++)
-        //     {
-        //         if (products[i].name == gameData.shopsWrapper[j].productName)
-        //         {
-        //             products[i].isBought = gameData.shopsWrapper[j].isBought;
-        //         }
-        //     }
-
-        // }
-
-    }
-
-    public void SaveData(ref GameData gameData)
-    {
-        for (int i = 0; i < products.Count; i++)
-        {
-            ShopSOWrapper shopSOWrapper = new ShopSOWrapper();
-            shopSOWrapper.productName = products[i].name;
-            shopSOWrapper.isBought = products[i].isBought;
-            gameData.shopsWrapper[shopIndex].Add(shopSOWrapper);
-        }
-
-    }
 }
