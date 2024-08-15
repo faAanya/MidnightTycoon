@@ -21,6 +21,96 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1036
   Exists: 1
+--- !u!114 &-8851289712301891561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: "../../../Users/\u041F\u043E\u043B\u0438\u043D\u0430 \u041A\u0438\u0440\u043F\u0438\u0447\u0451\u043D\u043E\u043A/Documents/FMOD
+    Studio/MidnightIdleTycoonWorkable/Build/Desktop/Master.strings.bank"
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638593241709061791
+  FileSizes:
+  - Name: Desktop
+    Value: 982
+  Exists: 1
+--- !u!114 &-5517687896552896849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: "../../../Users/\u041F\u043E\u043B\u0438\u043D\u0430 \u041A\u0438\u0440\u043F\u0438\u0447\u0451\u043D\u043E\u043A/Documents/FMOD
+    Studio/MidnightIdleTycoonWorkable/Build/Desktop/SFX.bank"
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638593241709564718
+  FileSizes:
+  - Name: Desktop
+    Value: 635968
+  Exists: 1
+--- !u!114 &-1315426023919212310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music Folder/Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music Folder/Music
+  Guid:
+    Data1: 280474682
+    Data2: 1336723484
+    Data3: -1686145405
+    Data4: -30216967
+  Banks:
+  - {fileID: -862742106079121418}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 34162
+--- !u!114 &-862742106079121418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: "../../../Users/\u041F\u043E\u043B\u0438\u043D\u0430 \u041A\u0438\u0440\u043F\u0438\u0447\u0451\u043D\u043E\u043A/Documents/FMOD
+    Studio/MidnightIdleTycoonWorkable/Build/Desktop/Music.bank"
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 638593241709821293
+  FileSizes:
+  - Name: Desktop
+    Value: 636000
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34,19 +124,41 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 6915716356035711026}
-  - {fileID: -8961543749456066687}
-  - {fileID: 1630574247148401067}
-  - {fileID: 5709937630149473750}
+  - {fileID: -8851289712301891561}
+  - {fileID: 849708055240606259}
+  - {fileID: -862742106079121418}
+  - {fileID: -5517687896552896849}
   EditorEvents:
-  - {fileID: 1138564639967925624}
+  - {fileID: -1315426023919212310}
+  - {fileID: 6324160519443145651}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -8961543749456066687}
+  - {fileID: 849708055240606259}
   StringsBanks:
-  - {fileID: 6915716356035711026}
-  cacheTime: 638591509876722618
+  - {fileID: -8851289712301891561}
+  cacheTime: 638593241709821293
   cacheVersion: 131619
+--- !u!114 &849708055240606259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: "../../../Users/\u041F\u043E\u043B\u0438\u043D\u0430 \u041A\u0438\u0440\u043F\u0438\u0447\u0451\u043D\u043E\u043A/Documents/FMOD
+    Studio/MidnightIdleTycoonWorkable/Build/Desktop/Master.bank"
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638593241708993564
+  FileSizes:
+  - Name: Desktop
+    Value: 1340
+  Exists: 1
 --- !u!114 &1138564639967925624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,6 +228,33 @@ MonoBehaviour:
   - Name: Desktop
     Value: 494
   Exists: 1
+--- !u!114 &6324160519443145651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music Folder/New Event
+  m_EditorClassIdentifier: 
+  Path: event:/Music Folder/New Event
+  Guid:
+    Data1: 1057669974
+    Data2: 1286774133
+    Data3: -1669519743
+    Data4: 912499689
+  Banks:
+  - {fileID: -5517687896552896849}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6915716356035711026
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1209,7 +1209,9 @@ MonoBehaviour:
   products:
   - {fileID: 11400000, guid: d9b5f69edfc7c594ab3b9d6702da1a3b, type: 2}
   button: {fileID: 8957599818281571535, guid: 0abfef30b184fc343b7753345aa4309a, type: 3}
+  buttonWrapper: {fileID: 1972570730060649737}
   size: 0
+  shopIndex: 0
   station: {fileID: 7851120341407394362}
   model: {fileID: 1181113032117192382}
 --- !u!1 &2322569320479730413
@@ -3289,6 +3291,7 @@ GameObject:
   - component: {fileID: 6633747449482564882}
   - component: {fileID: 5816495177808324286}
   - component: {fileID: 8824807590088838008}
+  - component: {fileID: 6778878610251617382}
   m_Layer: 0
   m_Name: Station (1)
   m_TagString: Station
@@ -3435,6 +3438,28 @@ MonoBehaviour:
   capacityCost: 1
   timeCost: 1
   courseCost: 1
+--- !u!114 &6778878610251617382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7851120341407394362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44e4eb1910ae9a54a9311437f3f2e78f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uIView: {fileID: 0}
+  products:
+  - {fileID: 11400000, guid: f55e26cd986887e408f9d0a13f30e016, type: 2}
+  - {fileID: 11400000, guid: f55e26cd986887e408f9d0a13f30e016, type: 2}
+  - {fileID: 11400000, guid: f55e26cd986887e408f9d0a13f30e016, type: 2}
+  button: {fileID: 4145410056538530993, guid: 68e3babac4e040746a470ccbca125122, type: 3}
+  buttonWrapper: {fileID: 170130737882797252}
+  size: 3
+  shopIndex: 1
+  placeWithChairs: {fileID: 4959148048729607990}
 --- !u!1 &7982668339770442157
 GameObject:
   m_ObjectHideFlags: 0
@@ -4301,11 +4326,7 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 5540041516175055604}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5068637512407913419, guid: 2260a6ffafbc338459324ac0c4b05c5e,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1040131778352562468}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2260a6ffafbc338459324ac0c4b05c5e, type: 3}
 --- !u!1 &90037504904627569 stripped
 GameObject:
@@ -4319,26 +4340,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4903021377879672591}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1040131778352562468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 170130737882797252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44e4eb1910ae9a54a9311437f3f2e78f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uIView: {fileID: 0}
-  products:
-  - {fileID: 11400000, guid: f55e26cd986887e408f9d0a13f30e016, type: 2}
-  - {fileID: 11400000, guid: f55e26cd986887e408f9d0a13f30e016, type: 2}
-  - {fileID: 11400000, guid: f55e26cd986887e408f9d0a13f30e016, type: 2}
-  button: {fileID: 4145410056538530993, guid: 68e3babac4e040746a470ccbca125122, type: 3}
-  size: 3
-  placeWithChairs: {fileID: 4959148048729607990}
 --- !u!224 &5333444932696967722 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1013085752422599973, guid: 2260a6ffafbc338459324ac0c4b05c5e,

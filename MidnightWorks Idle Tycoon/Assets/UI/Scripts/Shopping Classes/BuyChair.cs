@@ -21,8 +21,6 @@ public class BuyChair : Shopping
                 placeWithChairs.chairsGO[i].transform.rotation = Quaternion.Euler(0, (j + 180f) * Mathf.Pow(-1, i), 0);
 
             }
-            // placeWithChairs.DestroyChairs();
-            // placeWithChairs.BuildChairs();
         }
     }
 }

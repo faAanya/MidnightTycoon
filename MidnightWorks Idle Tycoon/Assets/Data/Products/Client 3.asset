@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1b33aac811a3a74784fcc94a84c8000, type: 3}
   m_Name: Client 3
   m_EditorClassIdentifier: 
+  isBought: 0
   cost: 30
   product: {fileID: 958745142335686053, guid: 95aa05ec0ea0a884ab92946b57d2c7b4, type: 3}
   productName: Client 3

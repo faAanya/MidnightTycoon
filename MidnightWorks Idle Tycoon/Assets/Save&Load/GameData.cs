@@ -1,6 +1,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 
@@ -20,7 +21,7 @@ public class GameData
     public List<StationState> stationWrapper;
     public List<PlaceWithChairsState> placeWithChairsWrapper;
 
-    public List<ShopsState> shopsWrapper;
+    public List<List<ShopSOWrapper>> shopsWrapper;
 
     public UpgraderState upgraderState;
     public GameData()
@@ -30,7 +31,10 @@ public class GameData
         hearts = 3;
         placeWithChairsWrapper = new List<PlaceWithChairsState>();
         stationWrapper = new List<StationState>();
-        shopsWrapper = new List<ShopsState>();
+
+        shopsWrapper = new List<List<ShopSOWrapper>>(3);
+
+
         upgraderState = new UpgraderState();
         upgraderState.capacityCost = 1;
         upgraderState.timeCost = 1;
@@ -57,13 +61,16 @@ public struct PlaceWithChairsState
 
     public int capacitySave;
 }
-[System.Serializable]
-public struct ShopsState
-{
-    public int placeNameSave;
 
-    public int capacitySave;
+
+[System.Serializable]
+public struct ShopSOWrapper
+{
+    public bool isBought;
+
+    public string productName;
 }
+
 [System.Serializable]
 public struct UpgraderState
 {

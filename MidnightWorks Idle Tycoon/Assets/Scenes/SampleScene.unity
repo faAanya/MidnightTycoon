@@ -355,6 +355,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6778878610251617382, guid: ec4106cf4905498488cf55ff89692f64,
+        type: 3}
+      propertyPath: uIView
+      value: 
+      objectReference: {fileID: 229297109}
     - target: {fileID: 6927467433966310666, guid: ec4106cf4905498488cf55ff89692f64,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -764,6 +769,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chair (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6778878610251617382, guid: ec4106cf4905498488cf55ff89692f64,
+        type: 3}
+      propertyPath: uIView
+      value: 
+      objectReference: {fileID: 229297109}
     - target: {fileID: 7851120341407394362, guid: ec4106cf4905498488cf55ff89692f64,
         type: 3}
       propertyPath: m_Name
@@ -1609,6 +1619,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chair (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6778878610251617382, guid: ec4106cf4905498488cf55ff89692f64,
+        type: 3}
+      propertyPath: uIView
+      value: 
+      objectReference: {fileID: 229297109}
     - target: {fileID: 7851120341407394362, guid: ec4106cf4905498488cf55ff89692f64,
         type: 3}
       propertyPath: m_Name
@@ -1663,8 +1678,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2095829721}
-  - component: {fileID: 2095829723}
   - component: {fileID: 2095829722}
+  - component: {fileID: 2095829724}
   m_Layer: 0
   m_Name: Audio Manager
   m_TagString: Untagged
@@ -1699,21 +1714,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fbd177f945238b46b95bcab1a59f51b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <equiptionSound>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   <ambient>k__BackingField:
     Guid:
-      Data1: 280474682
-      Data2: 1336723484
-      Data3: -1686145405
-      Data4: -30216967
-    Path: event:/Music
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   <music>k__BackingField:
     Guid:
       Data1: 280474682
       Data2: 1336723484
       Data3: -1686145405
       Data4: -30216967
-    Path: event:/Music
---- !u!114 &2095829723
+    Path: event:/Music Folder/Music
+--- !u!114 &2095829724
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1722,12 +1744,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2095829720}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 604f5395a82b00b47a9b6be2ca78c8da, type: 3}
+  m_Script: {fileID: 11500000, guid: d5f44b131a516e147bae520eac737b52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  masterVolume: 1
-  musicVolume: 1
-  sfxVolume: 1
+  volumeType: 1
 --- !u!1001 &1978330154520005275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1736,11 +1756,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1040131778352562468, guid: ec4106cf4905498488cf55ff89692f64,
-        type: 3}
-      propertyPath: uIView
-      value: 
-      objectReference: {fileID: 229297109}
     - target: {fileID: 4803935667423897868, guid: ec4106cf4905498488cf55ff89692f64,
         type: 3}
       propertyPath: uIView
@@ -1796,6 +1811,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6778878610251617382, guid: ec4106cf4905498488cf55ff89692f64,
+        type: 3}
+      propertyPath: uIView
+      value: 
+      objectReference: {fileID: 229297109}
     - target: {fileID: 7851120341407394362, guid: ec4106cf4905498488cf55ff89692f64,
         type: 3}
       propertyPath: m_Name
@@ -1906,11 +1926,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 354490237083180634, guid: e76c5ee44a6cc5e40af13fc6966b3e45,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1156300292512193414, guid: e76c5ee44a6cc5e40af13fc6966b3e45,
         type: 3}
@@ -2198,8 +2213,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 9086335995357264065, guid: e76c5ee44a6cc5e40af13fc6966b3e45, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e76c5ee44a6cc5e40af13fc6966b3e45, type: 3}
